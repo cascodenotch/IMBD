@@ -1,6 +1,7 @@
 import { IMDb } from "./IMDb";
 import { Movie } from "./Movie";
 import { Professional } from "./Professional";
+import * as fs from 'fs';
 
 let pelicula1 = new Movie ("Star Wars", 1960, "Estados Unidos", "Ciencia ficción");
 let pelicula2 = new Movie ("Dune", 1960, "Estados Unidos", "Ciencia ficción");
@@ -25,4 +26,7 @@ pelicula1.distributor = "Fox";
 let imdb = new IMDb([pelicula1, pelicula2, pelicula3]);
 
 console.log(imdb.mostrarListado());
+
+let imdbString = JSON.stringify(imdb);
+fs.writeFileSync('imdbBBDD.json', imdbString);
 
