@@ -21,16 +21,7 @@ this.profession = profession;
 }
 
 public mostrarAtributo():string {
-let atributos = "Nombre: " + this.name + 
-"\nEdad: " + this.age + 
-"\nPeso: "+this.weight + 
-"\nAltura: "+this.height + 
-"\nRetirado: "+this.isRetired + 
-"\nNacionalidad: "+this.nationality + 
-"\nNumero de Oscars: "+this.oscarsNumber + 
-"\nProfesion: "+this.profession;
-
-console.log (atributos);
+let atributos = "Nombre: " + this.name + " Edad: " + this.age + " Peso: "+this.weight + " Altura: "+this.height + " Retirado: "+this.isRetired + " Nacionalidad: "+this.nationality + " Num de Oscars: "+this.oscarsNumber + " Profesion: "+this.profession;
 
 return atributos;
 

@@ -5,7 +5,7 @@ export class Movie {
 public title: string
 public releaseYear: number
 public actors: Professional[]
-public nacionality: string
+public nationality: string
 public director: Professional
 public writer: Professional
 public language: string
@@ -19,18 +19,29 @@ public genre: string
 constructor (title:string, releaseYear: number, nationality:string, genre: string){
     this.title = title;
     this.releaseYear = releaseYear;
-    this.nacionality = nationality; 
+    this.nationality = nationality; 
     this.genre = genre; 
 }
+
+// Para mostrar el array de actores 
+public mostrarActores(): string{
+    let actores = "";
+    for (let i =0; i<this.actors.length; i++){
+    actores = actores + this.actors[i].mostrarAtributo()+ "\n"
+    }
+    return actores;
+}
+
+// Para mostrar los datos de la película 
 
 public mostrarDatos ():string{
 
     let datos = "Título: " + this.title +
     "\nAño: " + this.releaseYear +
-    "\nActores: " + this.actors +
-    "\nNacionalidad: " + this.nacionality +
-    "\nDirector: " + this.director +
-    "\nEscritor: " + this.writer +
+    "\nActores: " + this.mostrarActores()+
+    "\nNacionalidad: " + this.nationality +
+    "\nDirector: " + this.director.mostrarAtributo() +
+    "\nEscritor: " + this.writer.mostrarAtributo() +
     "\nIdioma: " + this.language +
     "\nPlataforma: " + this.plataforma +
     "\nMCU: " + this.isMCU +
@@ -39,7 +50,7 @@ public mostrarDatos ():string{
     "\nDistribuidor: " + this.distributor +
     "\nGenero: " + this.genre;
     
-    console.log (datos);
+   
     return datos; 
 }
 
