@@ -25,8 +25,15 @@ pelicula1.distributor = "Fox";
 
 let imdb = new IMDb([pelicula1, pelicula2, pelicula3]);
 
-console.log(imdb.mostrarListado());
+// Convertir imdb en un string y guardarlo en .json
 
-let imdbString = JSON.stringify(imdb);
-fs.writeFileSync('imdbBBDD.json', imdbString);
+let imdbString = JSON.stringify({ peliculas: imdb.movies });
+fs.writeFileSync('imdbBBDD.json', imdbString, 'utf-8');
 
+// Leer el fichero .json 
+
+let imdbData = fs.readFileSync('imdbBBDD.json', 'utf-8');
+let imdbObj = JSON.parse(imdbData);
+
+let imdbFromFile = new IMDb(imdbObj.peliculas); 
+console.log(imdbFromFile.mostrarListado());

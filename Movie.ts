@@ -24,6 +24,12 @@ constructor (title:string, releaseYear: number, nationality:string, genre: strin
     this.actors =[];
     this.director = new Professional("", 0, 0,0, true, "", 0, "");
     this.writer = new Professional("", 0, 0,0, true, "", 0, "");
+    this.language = "";
+    this.plataforma = "";
+    this.isMCU = true;
+    this.mainCharacterName = "";
+    this.producer = "";
+    this.distributor = "";
 }
 
 // Para mostrar el array de actores 

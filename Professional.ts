@@ -12,7 +12,7 @@ public profession: string
 constructor (name: string, age: number, weight: number, height: number, isRetired: boolean, nationality: string, oscarsNumber: number, profession: string){
 this.name = name; 
 this.age = age; 
-this.weight = age; 
+this.weight = weight; 
 this.height = height; 
 this.isRetired = isRetired;
 this.nationality = nationality; 
