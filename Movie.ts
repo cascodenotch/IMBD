@@ -21,6 +21,9 @@ constructor (title:string, releaseYear: number, nationality:string, genre: strin
     this.releaseYear = releaseYear;
     this.nationality = nationality; 
     this.genre = genre; 
+    this.actors =[];
+    this.director = new Professional("", 0, 0,0, true, "", 0, "");
+    this.writer = new Professional("", 0, 0,0, true, "", 0, "");
 }
 
 // Para mostrar el array de actores 
@@ -33,7 +36,6 @@ public mostrarActores(): string{
 }
 
 // Para mostrar los datos de la película 
-
 public mostrarDatos ():string{
 
     let datos = "Título: " + this.title +

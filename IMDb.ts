@@ -13,10 +13,9 @@ export class IMDb{
         let resultado = "";
 
         for (let i=0; i<this.movies.length; i++){
-        resultado = resultado +this.movies[i].mostrarDatos();
+        resultado = resultado +this.movies[i].mostrarDatos()+"\n";
         }
 
-        console.log (resultado);
         return resultado;
 
     }
